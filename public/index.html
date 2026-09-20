@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">🛍️ My Store</div>
+
+        <div class="nav-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="#products">🛍️ Products</a>
+            <a href="#cart">🛒 Cart</a>
+
+            <a href="login.html" id="loginLink">🔐 Login</a>
+            <a href="register.html" id="registerLink">📝 Register</a>
+
+            <span id="userArea"></span>
+        </div>
+
+    </nav>
+
+
+    <header class="hero">
+
+        <h1>My E-Commerce Store 🛍️</h1>
+
+        <p>
+            Quality products at affordable prices
+        </p>
+
+        <a href="#products" class="shop-button">
+            Shop Now
+        </a>
+
+    </header>
+
+
+    <section id="products">
+
+        <h2 class="section-title">
+            Our Products
+        </h2>
+
+        <div class="products">
+
+            <div class="product">
+
+                <img src="headphones.jpg"
+                     alt="Wireless Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <p class="price">₹999</p>
+
+                <button onclick="addToCart(1)">
+                    Add to Cart
+                </button>
+
+                <br><br>
+
+                <a href="product.html?id=1">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="watch.jpg"
+                     alt="Smart Watch">
+
+                <h3>Smart Watch</h3>
+
+                <p class="price">₹1499</p>
+
+                <button onclick="addToCart(2)">
+                    Add to Cart
+                </button>
+
+                <br><br>
+
+                <a href="product.html?id=2">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="speaker.jpg"
+                     alt="Bluetooth Speaker">
+
+                <h3>Bluetooth Speaker</h3>
+
+                <p class="price">₹799</p>
+
+                <button onclick="addToCart(3)">
+                    Add to Cart
+                </button>
+
+                <br><br>
+
+                <a href="product.html?id=3">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="cart" class="cart">
+
+        <h2>🛒 Shopping Cart</h2>
+
+        <div id="cartItems">
+            Cart is empty
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>🛍️ My E-Commerce Store</h3>
+
+        <p>
+            Quality products at affordable prices
+        </p>
+
+        <p>
+            © 2026 My E-Commerce Store
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

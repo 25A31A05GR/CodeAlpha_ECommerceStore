@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Successful</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <style>
+
+        .success-container {
+
+            max-width: 650px;
+
+            margin: 60px auto;
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            background: white;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        .success-icon {
+
+            font-size: 70px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .success-container h1 {
+
+            font-size: 34px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .success-container > p {
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .order-info {
+
+            max-width: 450px;
+
+            margin: 0 auto 30px;
+
+            padding: 20px;
+
+            background: #f5f5f5;
+
+            border-radius: 12px;
+
+            text-align: left;
+        }
+
+
+        .order-info p {
+
+            font-size: 18px;
+
+            margin: 14px 0;
+        }
+
+
+        .continue-btn {
+
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            background: #222;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-size: 16px;
+        }
+
+
+        .continue-btn:hover {
+
+            background: #444;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛍️ My Store
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <div class="success-container">
+
+
+        <div class="success-icon">
+            ✅
+        </div>
+
+
+        <h1>
+            Order Placed Successfully!
+        </h1>
+
+
+        <p>
+            Thank you for shopping with us.
+        </p>
+
+
+        <div class="order-info">
+
+
+            <p>
+
+                <strong>Order ID:</strong>
+
+                <span id="orderId">
+                    -
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Customer:</strong>
+
+                <span id="customerName">
+                    -
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Total:</strong>
+
+                ₹<span id="orderTotal">
+                    0
+                </span>
+
+            </p>
+
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="continue-btn"
+        >
+            ← Continue Shopping
+        </a>
+
+
+    </div>
+
+
+    <script>
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const orderId =
+            params.get("orderId");
+
+
+        const customerName =
+            params.get("customerName");
+
+
+        const total =
+            params.get("total");
+
+
+        const savedOrderId =
+            localStorage.getItem(
+                "orderId"
+            );
+
+
+        const savedCustomerName =
+            localStorage.getItem(
+                "customerName"
+            );
+
+
+        const savedTotal =
+            localStorage.getItem(
+                "orderTotal"
+            );
+
+
+        document.getElementById(
+            "orderId"
+        ).textContent =
+            orderId ||
+            savedOrderId ||
+            "-";
+
+
+        document.getElementById(
+            "customerName"
+        ).textContent =
+            customerName ||
+            savedCustomerName ||
+            "-";
+
+
+        document.getElementById(
+            "orderTotal"
+        ).textContent =
+            total ||
+            savedTotal ||
+            "0";
+
+    </script>
+
+
+</body>
+
+</html>
