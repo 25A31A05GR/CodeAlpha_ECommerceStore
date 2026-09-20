@@ -50,3 +50,21 @@ ecommerce-store/
     ├── headphones.jpg
     ├── watch.jpg
     └── speaker.jpg
+▶️ How to Run
+1. Download the Project
+Download the repository from GitHub using Code → Download ZIP.
+2. Open the Project
+Extract the ZIP file and open the project folder in VS Code.
+3. Install Dependencies
+Open the VS Code terminal and run:
+npm install
+4. Start the Server
+Run:
+node server.js
+5. Open the Website
+Open your browser and visit:
+http://localhost:3000
+🎯 Internship
+This project was developed for the CodeAlpha Full Stack Development Internship – Task 1.
+👩‍💻 Developer
+Geetha
